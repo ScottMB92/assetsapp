@@ -6,6 +6,10 @@ Username: Scott
 
 Password: adminuser
 
+The live hosted application can be found here:
+
+https://assetsapp-32e4007cba99.herokuapp.com/
+
 ## Dependencies
 
 Please find the list of dependencies for this application below (this can also be found in requirements.txt):
