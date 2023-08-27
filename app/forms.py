@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, SelectField, TextAreaField
-from wtforms.validators import DataRequired, Length, EqualTo
+from wtforms.validators import DataRequired, Length
 
 # Lines 8 to 14 utilise the Flask WTForms library to define the class for the registration form that appears on register.html. All three fields of the form (username, password, and confirm password) are validated to ensure that data is present in the username and password fields. It is also checked that the username has a minimum of 2 characters entered and a maximum of 20 characters, and that the confirmed password matches what is entered into the initial password field
 
