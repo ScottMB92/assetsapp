@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+<!-- Lines 5 to 17 utilise a Bootstrap modal to create a pop up dialog box that asks the user to confirm or cancel the action of logging out of their account -->
+
+{% block content %}
+<div class="container">
+    <h1>Logout</h1>
+    <hr>
+    <p>Are you sure you want to log out?</p>
+
+    <form method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <button type="submit" class="btn btn-danger">Logout</button>
+        <a href="{{ url_for('main.index') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

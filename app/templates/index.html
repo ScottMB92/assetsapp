@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+<!-- Lines 5 to 20 add the No Fuss logo and an inventory image, in addition to the name of the app, to the homepage. At the very top of the page is where any flashed messages for informing the user that they have succesfully logged in or out (generated in the login/logout routes in routes.py) are displayed -->
+
+{% block content %}
+<div class="container mt-4">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert alert-success">
+        {{ messages[0] }}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <img src="{{ url_for('static', filename='nofusslogo.png') }}" alt="Logo" class="logo">
+    <hr>
+    <h1>No Fuss IT Asset Register</h1>
+    <hr>
+    <img src="{{ url_for('static', filename='inventory.jpg') }}" height="400">
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+<!-- Lines 5 to 41 generate a form for the user to register with using a username and password, which will only succeed as long as the validation checks in routes.py are passed upon submisson. If the user enters a username that has already been taken, a flashed message generated in the register route in routes.py will be displayed at the top of the page informing the user that they need to choose a different username. If successful, the user will be redirected to the login page and informed that registration was successful -->
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1>Register</h1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-danger">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.username.label }}
+                {{ form.username(class="form-control") }}
+            </div>
+            <br>
+            <div class="form-group">
+                {{ form.password.label }}
+                {{ form.password(class="form-control") }}
+            </div>
+            <br>
+            <div class="form-group">
+                {{ form.confirm_password.label }}
+                {{ form.confirm_password(class="form-control") }}
+            </div>
+            <br>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

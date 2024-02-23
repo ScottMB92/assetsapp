@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+<!-- Lines 5 to 13 check for any flashed messages generated in the 'edit' route for assets in routes.py, and displays them in the user interface if one is called -->
+
+{% block content %}
+<div class="container">
+    <h1>Edit Asset</h1>
+    <hr>
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+    {% endfor %}
+
+    <!-- Lines 17 to 44 generate a form for the user to edit the data and dropdown selections for an existing asset in the database, and any changes are then pushed to that record in the database if the validation checks pass upon submission -->
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.category.label(class="form-label") }}
+            {{ form.category(class="form-select form-control") }}
+        </div>
+        <br>
+        <div class="form-group">
+            {{ form.manufacturer.label(class="form-label") }}
+            {{ form.manufacturer(class="form-select form-control") }}
+        </div>
+        <br>
+        <div class="form-group">
+            {{ form.customer.label(class="form-label") }}
+            {{ form.customer(class="form-select form-control") }}
+        </div>
+        <br>
+        <div class="form-group">
+            {{ form.comments.label(class="form-label") }}
+            {{ form.comments(class="form-control") }}
+        </div>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                Update Asset
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

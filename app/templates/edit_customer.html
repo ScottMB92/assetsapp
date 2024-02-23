@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<!-- Lines 5 to 13 check for any flashed messages generated in the 'edit' route for customers in routes.py, and displays them in the user interface if one is called -->
+
+{% block content %}
+<div class="container">
+    <h1>Edit Customer</h1>
+    <hr>
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+    {% endfor %}
+
+    <!-- Lines 17 to 31 generate a form for the user to edit the data and dropdown selections for an existing customer in the database, and any changes are then pushed to that record in the database if the validation checks pass upon submission -->
+
+    <form method="POST">
+        {{ customer_form.hidden_tag() }}
+        <div class="form-group">
+            {{ customer_form.name.label(class="form-label") }}
+            {{ customer_form.name(class="form-control") }}
+        </div>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                Update Customer
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
