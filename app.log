@@ -223,3 +223,59 @@ INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 01:29:35] "[36mGET /static/nofusslogo_
 INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: main.login
 INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 01:29:36] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
 INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 01:29:36] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:33] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:33] "[36mGET /static/nofusslogo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:33] "[36mGET /static/inventory.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:34] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:34] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:root:User registered successfully: Test123456789
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:50] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:50] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:43:50] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:44] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:44] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:45] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:46] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:46] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:46] "[36mGET /static/nofusslogo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:46] "[36mGET /static/inventory.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:47] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:47] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:root:User logged in successfully: Scott
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:54] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:54] "[36mGET /static/inventory.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:54] "[36mGET /static/nofusslogo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:55] "GET /customers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:55] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:56] "GET /logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:56] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:57] "[32mPOST /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:57] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:57] "[36mGET /static/nofusslogo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:57] "[36mGET /static/inventory.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:58] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:50:58] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: main.login
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:51:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:51:03] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+WARNING:root:Invalid login attempt with username: Scott
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:53:52] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:53:52] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:root:User logged in successfully: Scott
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:53:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:53:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:53:55] "[36mGET /static/nofusslogo_sml.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:53:55] "[36mGET /static/nofusslogo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2024 20:53:55] "[36mGET /static/inventory.jpg HTTP/1.1[0m" 304 -
