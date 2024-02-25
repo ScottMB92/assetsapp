@@ -16,7 +16,7 @@ def app():
 def test_registration_form(app):
     with app.app_context():
         form = RegistrationForm(
-            username="testuser", password="testpassword", confirm_password="testpassword")
+            username="testuser", password="TestPassword123!", confirm_password="TestPassword123!")
         assert form.validate() == True
 
 

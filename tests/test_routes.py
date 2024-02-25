@@ -32,8 +32,8 @@ def test_register(client):
 
     response = client.post('/register', data=dict(
         username='testuser',
-        password='testpassword',
-        confirm_password='testpassword'
+        password='TestPassword123!',
+        confirm_password='TestPassword123!'
     ), follow_redirects=True)
 
     assert b'Registration successful. Please log in below' in response.data
@@ -42,7 +42,7 @@ def test_register(client):
 def test_login(client):
     response = client.post('/login', data=dict(
         username='testuser',
-        password='testpassword'
+        password='TestPassword123!'
     ), follow_redirects=True)
 
     assert b'Successfully logged in' in response.data
@@ -51,7 +51,7 @@ def test_login(client):
 def test_assets(client):
     response = client.post('/login', data=dict(
         username='testuser',
-        password='testpassword'
+        password='TestPassword123!'
     ), follow_redirects=True)
 
     response = client.get('/assets')
@@ -62,7 +62,7 @@ def test_assets(client):
 def test_edit_asset(client):
     response = client.post('/login', data=dict(
         username='testuser',
-        password='testpassword'
+        password='TestPassword123!'
     ), follow_redirects=True)
 
     response = client.get('/assets/1/edit')
@@ -73,7 +73,7 @@ def test_edit_asset(client):
 def test_customers(client):
     response = client.post('/login', data=dict(
         username='testuser',
-        password='testpassword'
+        password='TestPassword123!'
     ), follow_redirects=True)
 
     response = client.get('/customers')
@@ -84,7 +84,7 @@ def test_customers(client):
 def test_edit_customer(client):
     response = client.post('/login', data=dict(
         username='testuser',
-        password='testpassword'
+        password='TestPassword123!'
     ), follow_redirects=True)
 
     response = client.get('/edit_customer/1')
@@ -95,7 +95,7 @@ def test_edit_customer(client):
 def test_manufacturers(client):
     response = client.post('/login', data=dict(
         username='testuser',
-        password='testpassword'
+        password='TestPassword123!'
     ), follow_redirects=True)
 
     response = client.get('/manufacturers')
@@ -106,7 +106,7 @@ def test_manufacturers(client):
 def test_edit_manufacturer(client):
     response = client.post('/login', data=dict(
         username='testuser',
-        password='testpassword'
+        password='TestPassword123!'
     ), follow_redirects=True)
 
     response = client.get('/edit_manufacturer/1')
