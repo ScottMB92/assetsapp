@@ -4,11 +4,15 @@ The No Fuss IT Assets Application serves to allow users to maintain an asset reg
 
 Username: Scott
 
-Password: adminuser
+Password: AdminUser123!
 
-The live hosted application can be found here:
+The live hosted application for production can be found here:
 
-https://assetsapp-32e4007cba99.herokuapp.com/
+https://www.nofussit.app/
+
+And the live hosted application for development can be found here:
+
+https://assetsapp.onrender.com/
 
 ## Dependencies
 
@@ -21,6 +25,7 @@ click==8.1.6
 colorama==0.4.6
 coverage==7.3.0
 Flask==2.3.2
+Flask-Limiter==3.5.1
 Flask-Login==0.6.2
 Flask-Migrate==4.0.4
 Flask-SQLAlchemy==3.0.5
