@@ -2,9 +2,9 @@ name: Python application test
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, dev ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, dev ]
 
 jobs:
   build:
@@ -37,8 +37,13 @@ jobs:
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
-      if: success()
+      if: success() && github.ref == 'refs/heads/master'
       with:
         context: .
         push: true
         tags: scottmb92/assetsapp:latest
+
+    - name: Deploy to Render
+      if: success() && github.ref == 'refs/heads/dev'
+      run: |
+        curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
