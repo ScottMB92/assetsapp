@@ -42,4 +42,8 @@ jobs:
         context: .
         push: true
         tags: scottmb92/assetsapp:latest
-        
+
+    - name: Deploy to Render
+      if: success() && github.ref == 'refs/heads/dev'
+      run: |
+        curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
