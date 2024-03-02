@@ -15,7 +15,7 @@ limiter = Limiter(key_func=get_remote_address)
 def create_app():
     app = Flask(__name__)
     app.config.from_object('config.Config')
-    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+    app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 
     db_path = os.path.join(app.instance_path, 'site.db')
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_path
