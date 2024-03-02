@@ -11,6 +11,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      SQLALCHEMY_DATABASE_URI: ${{ secrets.SQLALCHEMY_DATABASE_URI }}
+
     steps:
     - uses: actions/checkout@v2
 
@@ -42,6 +46,9 @@ jobs:
         context: .
         push: true
         tags: scottmb92/assetsapp:latest
+        build-args: |
+          SECRET_KEY=${{ secrets.SECRET_KEY }}
+          SQLALCHEMY_DATABASE_URI=${{ secrets.SQLALCHEMY_DATABASE_URI }}
 
     - name: Deploy to Render
       if: success() && github.ref == 'refs/heads/dev'
